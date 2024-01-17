@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background: linear-gradient(30deg, rgb(0, 208, 255), rgba(6, 223, 234, 0.865), rgb(0, 128, 128));
+    padding: 0 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar nav ul {
+    display: flex;
+    margin: 2px;
+    padding: 5px;
+}
+
+.navbar nav ul li {
+margin: 5px;
+padding: 5px;
+}
+
+.navbar nav ul li a {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
