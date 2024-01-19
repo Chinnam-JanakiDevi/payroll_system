@@ -1,0 +1,59 @@
+.bgimage{
+    /* background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),url(""); */
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),url("https://media.istockphoto.com/id/1128174016/photo/payroll-and-salaries-folders-stack-with-label-on-black-binder-on-paperwork-documents-summary.jpg?s=612x612&w=0&k=20&c=hfxYRFiCSyA9MYPmKbxTCQoWhW_c67Crrt_TJqFdVUI=");
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+}
+.menu{
+    width: 100%;
+    height: 100px;
+}
+
+#firstlist{
+   color: #00ccff; 
+}
+.text{
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    position: absolute;
+    /* padding-top: 15px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.text h4{
+    font-size: 14px;
+    font-family: 'open sans', sans-serif;
+}
+.text h1{
+    font-size: 62px;
+    font-family: 'montserrat', sans-serif ;
+    font-weight: 700px;
+    margin: 14px 0px;
+}
+.text h3{
+    font-size: 15px;
+    font-family: 'open sans', sans-serif;
+}
+.home_btn{
+    background-color: rgba(255,255,255, 0.164);
+    color: white;
+    font-family: 'montserrat', sans-serif ;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+    width: 150px;
+    margin-top: 25px;
+    border: 3px solid white;
+    cursor: pointer;
+}
+.home_btn:hover{
+    background-color: white;
+    color: black;
+}
+

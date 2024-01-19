@@ -18,7 +18,7 @@ function Employee() {
   const [emp_name, setemp_name] = useState('');
   const [emp_qual, setemp_qual] = useState('');
   const [emp_join_date, setemp_join_date] = useState('');
-  const [emp_resign_date, setemp_resign_date] = useState('');
+  const [emp_resignation_date, setemp_resignation_date] = useState('');
   const [emp_pan_no, setemp_pan_no] = useState('');
   const [emp_aadhar_no, setemp_aadhar_no] = useState('');
   const [emp_pf_flag, setemp_pf_flag] = useState('');
@@ -45,7 +45,7 @@ function Employee() {
   // const [emp_bank_account_no, setemp_bank_account_no] = useState('');
   const handleInsert = async () => {
     try {
-      await axios.post('http://localhost:3001/employee_insert', { emp_code, emp_name, emp_qual, emp_join_date, emp_resign_date, emp_pan_no, emp_aadhar_no, emp_pf_flag, emp_pf_no, emp_esi_no, emp_est_flag, emp_gst_no, emp_basic, emp_dept, emp_hno, emp_street, emp_city, emp_pincode, emp_state, emp_ph_no, emp_email_id, emp_cons_res_flag, emp_spl_pay, emp_bank_ifsc, emp_bank_name, emp_bank_account_no });
+      await axios.post('http://localhost:3001/employee_insert', { emp_code, emp_name, emp_qual, emp_join_date, emp_resignation_date, emp_pan_no, emp_aadhar_no, emp_pf_flag, emp_pf_no, emp_esi_no, emp_est_flag, emp_gst_no, emp_basic, emp_dept, emp_hno, emp_street, emp_city, emp_pincode, emp_state, emp_ph_no, emp_email_id, emp_cons_res_flag, emp_spl_pay, emp_bank_ifsc, emp_bank_name, emp_bank_account_no });
       console.log('Data insert request sent');
     } catch (error) {
       console.error(error);
@@ -196,10 +196,10 @@ function Employee() {
           </div>
           <div className="form-group">
             <label for="inputZip" class="form-label">Resignation Date</label>
-            <input type="date" class="form-control" id="inputZip" value={emp_resign_date} onChange={(e) => setemp_resign_date(e.target.value)}></input>
+            <input type="date" class="form-control" id="inputZip" value={emp_resignation_date} onChange={(e) => setemp_resignation_date(e.target.value)}></input>
           </div><br />
-          <div className="col-md-4">
-            <div >
+          <div >
+            <div className="col-md-4">
               <label htmlFor="inputState" className="form-label">
                 PF flag
               </label>
@@ -231,8 +231,8 @@ function Employee() {
               </div>
             )}
           </div>
-          <div className="col-md-4">
-            <div >
+          <div >
+            <div className="col-md-4">
               <label htmlFor="inputState" className="form-label">
                 ESI flag
               </label>

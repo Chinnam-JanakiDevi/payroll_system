@@ -1,43 +1,76 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+*{
+  margin: 0px;
+  padding: 0px;
 }
-
-.navbar {
+.navbar{
+  margin: 0px;
+  padding: 0px;
+}
+.navbar nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 70px;
-    background: linear-gradient(30deg, rgb(0, 208, 255), rgba(6, 223, 234, 0.865), rgb(0, 128, 128));
-    padding: 0 30px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.navbar nav ul {
-    display: flex;
-    margin: 2px;
+    align-items: center;
     padding: 5px;
-}
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(251, 61, 61, 0.947);
+    height:70px;
+    width:100%
+    
+  }
+  .navbar nav p{
+    padding: 5px;
 
-.navbar nav ul li {
-margin: 5px;
-padding: 5px;
-}
+    font-size: 20px;
+    /* margin-left: -350px; */
+    color:white;
+    font-family:Georgia, 'Times New Roman', Times, serif
 
-.navbar nav ul li a {
-    border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-    background-color: white;
-}
-
+  }
+  .navbar nav ul{
+    display: flex;
+    padding:10px;
+  }
+  .navbar nav ul li {
+    list-style-type: none;
+    display: flex;
+    font-size: 20px;
+    
+  }
+  .navbar nav ul .name{
+    text-decoration: none;
+    font-size: 24px;
+    font-style: normal;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    color: white;
+  }
+  /* .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(251, 61, 61, 0.947);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown {
+    margin-top:16px;
+  }   */
