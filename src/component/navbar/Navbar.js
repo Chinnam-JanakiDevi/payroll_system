@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Employee from '../employee/Employee';
 import Home from '../home/Home';
@@ -6,37 +6,27 @@ import Hra from '../hra/Hra';
 import Da from '../da/Da';
 import Pf from '../pf/Pf';
 import GetYourSalary from '../GetYourSalary/GetYourSalary';
+import Register from '../Register/Register';
 import './Navbar.css';
 
 function Navbar() {
-  //   return (
-  //     <>
-  //       <div className="navbar">
-  //         <h1><b>PayRoll</b></h1>
-  //         <nav>
-  //           <ul>
-  //             <li>
-  //               <Link to="/Home">Home</Link>
-  //               <Link to="/Employee">Employee</Link>
-  //               <Link to="/Hra">Hra</Link>
-  //               <Link to="/Da">Da Table</Link>
-  //               <Link to="/Pf">Pf Table</Link>
-  //             </li>
-  //             {/* Add other navigation links here */}
-  //           </ul>
-  //         </nav>
-  //       </div>
-  //       <Routes>
-  //         <Route exact path="/Employee" element={<Employee />} />
-  //         <Route exact path="/Home" element={<Home />} />
-  //         <Route exact path="/Hra" element={<Hra />} />
-  //         <Route exact path="/Da" element={<Da />} />
-  //         <Route exact path="/Pf" element={<Pf />} />
-  //         {/* Add other routes here */}
-  //       </Routes>
-  //     </>
-  //   );
-  // }
+  const [showPfDropdown, setshowPfDropdown] = useState(false);
+  const [showDaDropdown, setShowDaDropdown] = useState(false);
+  const [showHraDropdown, setShowHraDropdown] = useState(false);
+
+  const togglePfDropdown = () => {
+    setshowPfDropdown(!showPfDropdown);
+  };
+
+  const toggleDaDropdown = () => {
+    setShowDaDropdown(!showDaDropdown);
+  };
+
+  const toggleHraDropdown = () => {
+    setShowHraDropdown(!showHraDropdown);
+  };
+
+
   return (
     <>
 
@@ -63,20 +53,49 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link class="name" to="/Da">
-                DA
-              </Link>
+              <div className="dropdown" onMouseEnter={toggleDaDropdown} onMouseLeave={toggleDaDropdown}>
+                <Link className="name" to="/Da">DA</Link>
+                {showDaDropdown && (
+                  <div className="dropdown-content">
+                    <Link to="/Da">Insert</Link>
+                    <Link to="/Da">Read</Link>
+                    <Link to="/Da">Update</Link>
+                    <Link to="/Da">Delete</Link>
+                    {/* Add more links related to DA */}
+                  </div>
+                )}
+              </div>
             </li>
             <li>
-              <Link class="name" to="/Hra">
-                HRA
-              </Link>
+              <div className="dropdown" onMouseEnter={toggleHraDropdown} onMouseLeave={toggleHraDropdown}>
+                <Link class="name" to="/Hra">HRA</Link>
+                {showHraDropdown && (
+                  <div className="dropdown-content">
+                    <Link to="/Hra">Insert</Link>
+                    <Link to="/Hra">Read</Link>
+                    <Link to="/Hra">Update</Link>
+                    <Link to="/Hra">Delete</Link>
+                    {/* Add more links related to DA */}
+                  </div>
+                )}
+              </div>
             </li>
-
             <li>
-              <Link className="name" to="/Pf">
-                PF
-              </Link>
+              <div className="dropdown" onMouseEnter={togglePfDropdown} onMouseLeave={togglePfDropdown}>
+                <Link className="name" to="/Pf">PF</Link>
+                {showPfDropdown && (
+                  <div className="dropdown-content">
+                    <Link to="/Pf">Insert</Link>
+                    <Link to="/Pf">Read</Link>
+                    <Link to="/Pf">Update</Link>
+                    <Link to="/Pf">Delete</Link>
+                    {/* Add more links related to DA */}
+                  </div>
+                )}
+              </div>
+            </li>
+            <li>
+              <Link class="name" to="/Register">SignIn/SignUp</Link>
             </li>
           </ul>
         </nav>
@@ -89,7 +108,7 @@ function Navbar() {
         <Route exact path="/Da" element={<Da />} />
         <Route exact path="/Pf" element={<Pf />} />
         <Route exact path="/GetYourSalary" element={<GetYourSalary />} />
-
+        <Route exact path="/Register" element={<Register />} />
         {/* Add other routes here */}
       </Routes>
 
