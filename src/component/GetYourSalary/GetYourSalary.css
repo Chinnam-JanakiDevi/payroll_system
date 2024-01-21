@@ -1,42 +1,84 @@
-
-.container  h2{
-    margin-left: 550px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.container {
+    border: 1px solid black;
+    margin-top: 10px;
 }
-.container .sal table{
-    width:600px;
+
+.container .sal .tables {
+    width: 500px;
     border: 1px solid black;
     align-items: center;
-    margin-left: 350px;
-    height:650px;
-    padding: 20px;
-    padding-left: 20px;
-    font-size: 16px;
+    margin-left: 30%;
+    height: 220px;
+    /* padding: 15px;
+    padding-left: 80px; */
+    /* padding-right:20px; */
+    /* font-size: 16px; */
 }
-.container .sal table caption{
+
+.container .sal .tables tbody td {
+    padding: 15px;
+}
+
+.container .sal .tables caption {
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 5ch;
+    margin-left: 170px;
+    font-weight: bold;
+    /* line-height: 5ch; */
 }
-#tragss{
-    width:50%;
-    padding: 10px 20px;
-    border:none;
-    border-bottom: 1px solid black;
-    outline:none;
-    
-}
-.divinp{
-    margin-top: 20px;
-    margin-left: 360px;
-    
-}
-table, tr, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-  }
 
-h3{
-    text-align: center;
+#tragss {
+    width: 50%;
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+
+}
+
+.divinp {
+    margin-left: 360px;
+}
+
+.container .sal .tabs {
+    display: flex;
+    margin-left: -400px;
+    width: -300px;
+}
+
+.container .sal .tabs .tab1 {
+    border: none;
+    margin-left: 460px;
+    height: 300px;
+    width: 400px;
+    /* padding: 20px; */
+
+
+
+}
+
+.container .sal .tabs .tab1 caption {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.container .sal .tabs .tab2 {
+    border: none;
+    margin-left: 100px;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+
+
+
+}
+
+.container .sal .tabs .tab2 caption {
+    font-size: 25px;
+    margin-left: 10px;
+
+}
+
+#but {
+    margin-left: 450px;
 }

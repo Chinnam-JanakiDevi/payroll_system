@@ -10,17 +10,17 @@ import Register from '../Register/Register';
 import './Navbar.css';
 
 function Navbar() {
-  const [showPfDropdown, setshowPfDropdown] = useState(false);
-  const [showDaDropdown, setShowDaDropdown] = useState(false);
+  // const [showPfDropdown, setshowPfDropdown] = useState(false);
+  // const [showDaDropdown, setShowDaDropdown] = useState(false);
   const [showHraDropdown, setShowHraDropdown] = useState(false);
 
-  const togglePfDropdown = () => {
-    setshowPfDropdown(!showPfDropdown);
-  };
+  // const togglePfDropdown = () => {
+  //   setshowPfDropdown(!showPfDropdown);
+  // };
 
-  const toggleDaDropdown = () => {
-    setShowDaDropdown(!showDaDropdown);
-  };
+  // const toggleDaDropdown = () => {
+  //   setShowDaDropdown(!showDaDropdown);
+  // };
 
   const toggleHraDropdown = () => {
     setShowHraDropdown(!showHraDropdown);
@@ -46,54 +46,23 @@ function Navbar() {
               <Link class="name" to="/GetYourSalary">
                 GetYourSalary
               </Link>
-            </li>
-            <li>
-              <Link class="name" to="/Employee">
-                Employee
-              </Link>
-            </li>
-            <li>
-              <div className="dropdown" onMouseEnter={toggleDaDropdown} onMouseLeave={toggleDaDropdown}>
-                <Link className="name" to="/Da">DA</Link>
-                {showDaDropdown && (
-                  <div className="dropdown-content">
-                    <Link to="/Da">Insert</Link>
-                    <Link to="/Da">Read</Link>
-                    <Link to="/Da">Update</Link>
-                    <Link to="/Da">Delete</Link>
-                    {/* Add more links related to DA */}
-                  </div>
-                )}
-              </div>
-            </li>
+            </li>          
             <li>
               <div className="dropdown" onMouseEnter={toggleHraDropdown} onMouseLeave={toggleHraDropdown}>
-                <Link class="name" to="/Hra">HRA</Link>
+                <Link class="name" to="/Employee">Tables</Link>
                 {showHraDropdown && (
                   <div className="dropdown-content">
-                    <Link to="/Hra">Insert</Link>
-                    <Link to="/Hra">Read</Link>
-                    <Link to="/Hra">Update</Link>
-                    <Link to="/Hra">Delete</Link>
+                    <Link to="/Employee">Employee</Link>
+
+                    <Link to="/Hra">HRA</Link>
+                    <Link to="/Pf">Pf</Link>
+                    <Link to="/Da">Da</Link>
                     {/* Add more links related to DA */}
                   </div>
                 )}
               </div>
             </li>
-            <li>
-              <div className="dropdown" onMouseEnter={togglePfDropdown} onMouseLeave={togglePfDropdown}>
-                <Link className="name" to="/Pf">PF</Link>
-                {showPfDropdown && (
-                  <div className="dropdown-content">
-                    <Link to="/Pf">Insert</Link>
-                    <Link to="/Pf">Read</Link>
-                    <Link to="/Pf">Update</Link>
-                    <Link to="/Pf">Delete</Link>
-                    {/* Add more links related to DA */}
-                  </div>
-                )}
-              </div>
-            </li>
+            
             <li>
               <Link class="name" to="/Register">SignIn/SignUp</Link>
             </li>

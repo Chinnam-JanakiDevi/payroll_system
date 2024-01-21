@@ -14,7 +14,7 @@ const Register = () => {
 
   return (
     <div className="auth-container">
-      <h2>{isRegistering ? "Register" : "Login"}</h2>
+      <h2 align="center">{isRegistering ? "Register" : "Login"}</h2>
       <form className="auth-form" onSubmit={handleFormSubmit}>
         <label className="auth-label">
           Email:
