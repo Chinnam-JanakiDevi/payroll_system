@@ -7,6 +7,7 @@ import Da from '../da/Da';
 import Pf from '../pf/Pf';
 import GetYourSalary from '../GetYourSalary/GetYourSalary';
 import Register from '../Register/Register';
+import Attendence from '../Attendence/Attendence';
 import './Navbar.css';
 
 function Navbar() {
@@ -46,7 +47,7 @@ function Navbar() {
               <Link class="name" to="/GetYourSalary">
                 GetYourSalary
               </Link>
-            </li>          
+            </li>
             <li>
               <div className="dropdown" onMouseEnter={toggleHraDropdown} onMouseLeave={toggleHraDropdown}>
                 <Link class="name" to="/Employee">Tables</Link>
@@ -62,7 +63,9 @@ function Navbar() {
                 )}
               </div>
             </li>
-            
+            <li>
+              <Link class="name" to="/Attendence">Attendence</Link>
+            </li>
             <li>
               <Link class="name" to="/Register">SignIn/SignUp</Link>
             </li>
@@ -78,6 +81,8 @@ function Navbar() {
         <Route exact path="/Pf" element={<Pf />} />
         <Route exact path="/GetYourSalary" element={<GetYourSalary />} />
         <Route exact path="/Register" element={<Register />} />
+        <Route exact path="/Attendence" element={<Attendence />} />
+
         {/* Add other routes here */}
       </Routes>
 

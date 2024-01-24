@@ -48,7 +48,7 @@
 
 .container .sal .tabs .tab1 {
     border: none;
-    margin-left: 460px;
+    margin-left: 600px;
     height: 300px;
     width: 400px;
     /* padding: 20px; */
@@ -64,7 +64,7 @@
 
 .container .sal .tabs .tab2 {
     border: none;
-    margin-left: 100px;
+    margin-left: 150px;
     height: 400px;
     width: 400px;
     padding: 20px;
@@ -80,5 +80,5 @@
 }
 
 #but {
-    margin-left: 450px;
+    margin-left: 40%;
 }
