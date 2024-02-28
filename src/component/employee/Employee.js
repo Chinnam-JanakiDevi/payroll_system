@@ -47,6 +47,7 @@ function Employee() {
     try {
       await axios.post('http://localhost:3001/employee_insert', { emp_code, emp_name, emp_qual, emp_join_date, emp_resignation_date, emp_pan_no, emp_aadhar_no, emp_pf_flag, emp_pf_no, emp_esi_no, emp_est_flag, emp_gst_no, emp_basic, emp_dept, emp_hno, emp_street, emp_city, emp_pincode, emp_state, emp_ph_no, emp_email_id, emp_cons_res_flag, emp_spl_pay, emp_bank_ifsc, emp_bank_name, emp_bank_account_no });
       console.log('Data insert request sent');
+      
     } catch (error) {
       console.error(error);
     }

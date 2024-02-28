@@ -48,13 +48,10 @@
 
 .container .sal .tabs .tab1 {
     border: none;
-    margin-left: 600px;
+    margin-left: 500px;
     height: 300px;
     width: 400px;
     /* padding: 20px; */
-
-
-
 }
 
 .container .sal .tabs .tab1 caption {

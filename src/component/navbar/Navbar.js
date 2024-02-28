@@ -39,18 +39,18 @@ function Navbar() {
           </p>
           <ul>
             <li>
-              <Link class="name" to="/">
+              <Link className="name" to="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link class="name" to="/GetYourSalary">
+              <Link className="name" to="/GetYourSalary">
                 GetYourSalary
               </Link>
             </li>
             <li>
               <div className="dropdown" onMouseEnter={toggleHraDropdown} onMouseLeave={toggleHraDropdown}>
-                <Link class="name" to="/Employee">Tables</Link>
+                <Link className="name" to="/Employee">Tables</Link>
                 {showHraDropdown && (
                   <div className="dropdown-content">
                     <Link to="/Employee">Employee</Link>
@@ -64,10 +64,10 @@ function Navbar() {
               </div>
             </li>
             <li>
-              <Link class="name" to="/Attendence">Attendence</Link>
+              <Link className="name" to="/Attendence">Attendence</Link>
             </li>
             <li>
-              <Link class="name" to="/Register">SignIn/SignUp</Link>
+              <Link className="name" to="/Register">SignIn/SignUp</Link>
             </li>
           </ul>
         </nav>

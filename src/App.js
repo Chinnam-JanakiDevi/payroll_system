@@ -1,10 +1,6 @@
-// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-// import { Routes, Route, Link } from 'react-router-dom';
-
 import Navbar from'./component/navbar/Navbar';
-// import Employee from './component/employee/Employee';
 function App() {
     
       return (
@@ -13,7 +9,6 @@ function App() {
       </>
       )}
         
-
 export default App;
 // import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
