@@ -1,0 +1,38 @@
+.adminnavbar{
+    background-color: rgba(251, 61, 61, 0.947);
+}
+.adminnavbar .navbar-nav{
+    padding: 10px 0 10px 0;
+}
+.navbar-nav .nav-link {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    font-weight: bold; 
+    font-size: 20px; 
+}
+
+.admin_button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin_button a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.admin_button a:hover {
+    color: #000; 
+}

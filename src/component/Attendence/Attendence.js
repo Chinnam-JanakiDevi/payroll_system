@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import axios from "axios";
 import './Attendence.css';
 
 function Attendence() {
     const [EmployeeDetails, setEmployeeDetails] = useState([]);
     const [, setsalarydetails] = useState("");
-    // useEffect(() => {
-    //     getEmployeeDetails();
-    // }, []);
+    useEffect(() => {
+        get_employee_details();
+    }, []);
     const get_employee_details = async () => {
         try {
             const response = await axios.get(`http://localhost:3001/all_employee_details_Read`);
@@ -28,6 +28,19 @@ function Attendence() {
             console.log(error);
         }
     }
+
+    const handleDelete = async (empCode) => {
+        try {
+            const response = await axios.delete(`http://localhost:3001/delete_employee/${empCode}`);
+            alert("successfully deleted",empCode);
+            get_employee_details();
+            // Handle success, such as updating the UI or showing a notification
+        } catch (error) {
+            console.error(error);
+            // Handle error, such as showing an error message
+        }
+    };
+
     return (
         <>
             <div>
@@ -51,7 +64,7 @@ function Attendence() {
                             <td>{employee[0]}</td>
                             <td>{employee[1]}</td>
                             <td><button>Update</button></td>
-                            <td><button>Delete</button></td>
+                            <td><button onClick={() => handleDelete(employee[0])}>Delete</button></td>
                         </tr>
                     ))}
                 </tbody>

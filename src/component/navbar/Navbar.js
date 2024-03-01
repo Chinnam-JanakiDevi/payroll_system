@@ -63,11 +63,11 @@ function Navbar() {
                 )}
               </div>
             </li>
-            <li>
+            {/* <li>
               <Link className="name" to="/Attendence">Attendence</Link>
-            </li>
+            </li> */}
             <li>
-              <Link className="name" to="/Register">SignIn/SignUp</Link>
+              <Link className="name" to="/Register">LogOut</Link>
             </li>
           </ul>
         </nav>
@@ -81,7 +81,7 @@ function Navbar() {
         <Route exact path="/Pf" element={<Pf />} />
         <Route exact path="/GetYourSalary" element={<GetYourSalary />} />
         <Route exact path="/Register" element={<Register />} />
-        <Route exact path="/Attendence" element={<Attendence />} />
+        {/* <Route exact path="/Attendence" element={<Attendence />} /> */}
 
         {/* Add other routes here */}
       </Routes>
